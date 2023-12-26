@@ -4,7 +4,6 @@ import net.faceless.funds.commands.subcommands.GetCommand;
 import net.faceless.funds.commands.subcommands.ResetCommand;
 import net.faceless.funds.commands.subcommands.AddCommand;
 import net.faceless.funds.utils.TabCompleteUtil;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

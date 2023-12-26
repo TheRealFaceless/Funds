@@ -1,7 +1,7 @@
 package net.faceless.funds.commands.subcommands;
 
 import net.faceless.funds.commands.SubCommand;
-import net.faceless.funds.utils.ChatUtils;
+import net.faceless.funds.utils.ChatUtil;
 import net.faceless.funds.utils.FundsManager;
 import net.faceless.funds.utils.TabCompleteUtil;
 import org.bukkit.Bukkit;
@@ -31,7 +31,7 @@ public class AddCommand extends SubCommand {
     public void execute(Player player, String[] args) {
         switch (args.length) {
             case (1) :
-            ChatUtils.sendMessage(player, "&7Please provide an amount.");
+            ChatUtil.sendMessage(player, "&7Please provide an amount.");
             break;
 
             case (2) :
@@ -39,9 +39,9 @@ public class AddCommand extends SubCommand {
                     int v = Integer.parseInt(args[1]);
                     BigDecimal val = BigDecimal.valueOf(v);
                     FundsManager.addFunds(player, val);
-                    ChatUtils.sendMessage(player, "&aAmount Deposited");
+                    ChatUtil.sendMessage(player, "&aAmount Deposited");
                 }catch (NumberFormatException e) {
-                    ChatUtils.sendMessage(player, "&cInvalid Value");
+                    ChatUtil.sendMessage(player, "&cInvalid Value");
                 }
                 break;
 
@@ -54,12 +54,12 @@ public class AddCommand extends SubCommand {
 
                     if(targetPlayer != null) {
                         FundsManager.addFunds(targetPlayer, val);
-                        ChatUtils.sendMessage(player, "&aAmount Deposited");
+                        ChatUtil.sendMessage(player, "&aAmount Deposited");
                     }else {
-                        ChatUtils.sendMessage(player, "&cPlayer does not Exist");
+                        ChatUtil.sendMessage(player, "&cPlayer does not Exist");
                     }
                 }catch (NumberFormatException e) {
-                    ChatUtils.sendMessage(player, "&cInvalid Value");
+                    ChatUtil.sendMessage(player, "&cInvalid Value");
                 }
                 break;
         }

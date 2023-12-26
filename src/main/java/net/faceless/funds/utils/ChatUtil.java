@@ -4,7 +4,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class ChatUtils {
+public class ChatUtil {
 
     public static void sendMessage (@NotNull Player player, String message) {
         message = ChatColor.translateAlternateColorCodes('&', message);
