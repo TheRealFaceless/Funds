@@ -1,0 +1,12 @@
+name: Funds
+version: '1.0-SNAPSHOT'
+main: net.faceless.funds.Funds
+api-version: '1.20'
+authors: [Faceless]
+description: Currency Plugin
+commands:
+  balance:
+    description: Check your balance!
+    usage: /Balance
+    aliases:
+      - b
